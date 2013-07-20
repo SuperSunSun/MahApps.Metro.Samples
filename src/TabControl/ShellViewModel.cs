@@ -8,20 +8,20 @@ namespace TabControlSample
 {
     public class ShellViewModel : ReactiveObject
     {
-        public ReactiveCollection<Genre> Genres { get; set; }
+        public ReactiveList<Genre> Genres { get; set; }
 
-        public ReactiveCollection<PanoramaGroup> Groups { get; set; }
+        public ReactiveList<PanoramaGroup> Groups { get; set; }
         
         public string Title { get; set; }
         public int SelectedIndex { get; set; }
-        public ReactiveCollection<Album> Albums { get; set; }
-        public ReactiveCollection<Artist> Artists { get; set; }
+        public ReactiveList<Album> Albums { get; set; }
+        public ReactiveList<Artist> Artists { get; set; }
 
         public ShellViewModel()
         {
-            Genres = new ReactiveCollection<Genre>(Data.Genres);
-            Albums = new ReactiveCollection<Album>(Data.Albums);
-            Artists = new ReactiveCollection<Artist>(Data.Artists);
+            Genres = new ReactiveList<Genre>(Data.Genres);
+            Albums = new ReactiveList<Album>(Data.Albums);
+            Artists = new ReactiveList<Artist>(Data.Artists);
         }
     }
 }
